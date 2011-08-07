@@ -5,28 +5,12 @@
 <style type="text/css">
 /*__DEFAULTS__________________________________*/
 * {
-	margin: 0;
-	outline: 0 solid #000000;
-	border: 0 solid #000000;
-	background-color: transparent;
-	padding: 0;
-	font-family: Arial, Helvetica, sans-serif;
+	margin:0;outline:0 solid #000000;border:0 solid #000000;padding:0;
+	font-family:Arial,Helvetica,sans-serif;font-size:12pt;font-style:normal;
 }
-body {
-	width: 7in;
-	height: 9.5in;
-	margin: 0 auto auto;
-}
-table {
-	display: block;
-	table-layout: auto;
-	border-spacing: 0;
-	empty-cells:  show;
-}
-td {
-	vertical-align: top;
-	border-left-width: 1px;
-}
+body { width: 7in; height: 9.5in; margin: 0 auto auto; }
+table { display: block; border-spacing: 0; empty-cells:  show; }
+td { vertical-align: top; border-left-width: 1px; }
 tr + tr > td { border-top-width: 1px; }
 li {
 	margin-left: 1.5em;
@@ -52,299 +36,202 @@ li {
 	margin: -7px -11px 5px 3px;
 	border-width: 1px 1px 1px 5px;
 }
-.shadow > table {
-	border-left-width: 0;
-}
+.shadow > table { border-left-width: 0; }
 /*__TABLE_STYLES______________________________*/
-.twocolumn {
-	colspan: "1";
-}
-.notopborder > tbody > tr > td, .notopborder > td, td.notopborder {
-	border-top-width: 0;
-}
-td:first-child {
-	border-left-width: 2px;
-	width: 2.5in;
-}
-.raised {
-	margin: 0;
-	border-width: 0;
-	background-color: #000000;
-}
+.notopborder td, td.notopborder { border-top-width: 0; }
+td:first-child { border-left-width: 2px; width: 1.875in; }
+td + td { width: 5.125in; }
+.raised { margin: 0; border-width: 0; background-color: #000000; }
 .raised > * {
 	margin: -3px -2px 2px 1px;
 	position: relative;
-//	top: -1px;
-//	left: 1px;
 	border-width: 1px 1px 1px 2px;
 }
+.raised, .raised * { font-weight: 700; }
 /*__FONT_STYLES________________________________*/
-* {
-	font-size: 12px;
-}
-h1 {
-	font-size: 24px;
-	font-weight: 700;
-	text-align: center;
-}
-h1 > small {
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 900;
-}
-h2 {
-	font-size: 16px;
-	font-weight: 700;
-	text-align: center;
-}
-h2 > small {
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 900;
-}
-h3 {
-	font-size: 12px;
-	font-weight: 700;
-	text-align: left;
-}
+h1, h2, h3, h4 { font-weight: 700; text-align: left; }
+h5 { font-stretch: condensed;  }
+h1, h2, h5 { text-align: center; }
+h1 { font-size: 24pt; }
+h1 > small { font-size: 20pt; font-weight: 900; }
+h2, h3 { font-size: 16pt; }
+h2 > small, h3 > small { font-size: 14pt; font-weight: 900; }
+h5 { font-size: 10 pt; font-weight:400; }
 </style>
 </head>
 <body>
-	<div class="main" >
-		<h1>
-			S<small>PENCER </small>G<small>RAFF</small>
-		</h1>
-		<h2>
-			S<small>OFTWARE </small>E<small>NGINEER </small>/ P<small>ROGRAMMER</small>
-		</h2>
-		<h2>(801)637-5925 graff_spencer@msn.com</h2>
-		<div class = "shadow" >
-			<p>
-				Talented, enthusiastic software engineer with a broad and well-rounded education;
-				&emsp;a passion for high-quality, well-designed, maintainable software;
-				&emsp;and real-world experience in teamwork and leadership.
-			</p>
-			<ul>
-				Strengths include:
-				<li>Works well in groups and promotes a positive work environment.</li>
-				<li>Demonstrates integrity and responsibility in the workplace.</li>
-				<li>A keen eye for identifying logic errors.</li>
-				<li>Experience in a variety of real-world domains.</li>
-			</ul>
-			<h3>Core Skills:</h3>
-		</div>
-		<div class = "shadow" >
-			<table>
-				<tr>
-					<td class = "twocolumn" >
-						<h2>R<small>ELATED</small> C<small>OURSEWORK</small></h2>
-					</td>
-				</tr>
-				<tr>
-					<td class = "raised" >
-						<ul>
-							<li>	Assembly Language</li>
-							<li>Software Testing</li>
-							<li>Debugging</li>
-							<li>?Security? vulnerability</li>
-							<li>Profiling</li>
-							<li>Optimization</li>
-						</ul>
-					</td>
-					<td>
-						Computer Systems
-					</td>
-				</tr>
-				<tr>
-					<td class = "raised" ><ul><li>Team Projects</li></ul></td>
-					<td class="notopborder" />
-				</tr>
-				<tr>
-					<td class="twocolumn" >
-						<dl>
-							<dt>Software Engineering</dt>
-							<dd></dd>
-							<dt>Software Practice</dt>
-							<dd></dd>
-							<dt>Computer Systems</dt>
-							<dd></dd>
-							<dt>Team Software Engineering</dt>
-							<dd></dd>
-							<dt>Natural Language Processing</dt>
-							<dd></dd>
-							<dt>Embedded System Design</dt>
-							<dd></dd>
-							<dt>Advanced Embedded Systems</dt>
-							<dd></dd>
-							<dt>Digital System Design</dt>
-							<dd></dd>
-							<dt>Computer Design Lab</dt>
-							<dd></dd>
-							<dt>VLSI Design: Arithmetic Circuits</dt>
-							<dd></dd>
-							<dt>Senior Project</dt>
-							<dd></dd>
-						</dl>
-					</td>
-				</tr>
-				<tr class="tborder" >
-					<td>
-						<h3>
-							Object-Oriented<br>
-							Programming & Design<br>
-							Design & Requirements Documentation<br>
-							UML
-						</h3>
-					</td>
-					<td>
-						Software Engineering<br>
-						Software Practice<br>
-						Team Software Engineering
-					</td>
-				</tr>
-				<tr class="tborder" >
-					<td><h3>Java</h3></td>
-					<td>
-						Algorithms & Data Structures<br>
-						Natural Language Processing<br>
-						Compiler Design
-					</td>
-				</tr>
-				<tr class="tborder" >
-					<td><h3>C++</h3></td>
-					<td>
-						Intro to Computer Science I / II<br>
-						Discrete Structures<br>
-						Software Practice<br>
-						Computer Systems
-					</td>
-				</tr>
-				<tr class="tborder" >
-					<td>
-						<h3>
-							C#<br>
-							.net<br>
-							Pocket PC Development<br>
-							WiFi Interfacing
-						</h3>
-					</td>
-					<td>Team Software Engineering</td>
-				</tr>
-				<tr class="tborder" >
-					<td>
-						<h3>
-							Unix / Linux<br>
-							Shell Scripts
-						</h3>
-					</td>
-					<td>Unix Internals</td>
-				</tr>
-				<tr class="tborder" >
-					<td>
-						<h3>
-							Embedded Systems<br>
-							Embedded C
-						</h3>
-					</td>
-					<td>
-						Embedded System Design<br>
-						Advanced Embedded Systems<br>
-						Senior Project
-					</td>
-				</tr>
-				<tr class="tborder" >
-					<td>
-						Matlab<br>
-						VHDL<br>
-						Verilog<br>
-						FPGA<br>
-						Win32 API<br>
-						Zigbee Interfacing
-					</td>
-				</tr>
-			</table>
-		</div>
-		<div class = "shadow" >
-			<h2>?Self-Taught Skills?</h2>
-			<table>
-				<tr>
-					<td>PC Maintenance</td>
-					<td>CompTIA A+ Certification</td>
-				</tr>
-				<tr>
-					<td>Database</td>
-					<td>
-						SQL<br>
-						JDBC<br>
-						MySQL<br>
-						Oracle DB<br>
-						Git Repository
-					</td>
-				</tr>
-				<tr>
-					<td>Web Development</td>
-					<td>
-						HTML / XHTML<br>
-						CSS<br>
-						JavaScript<br>
-						jQuery<br>
-						JSP<br>
-						Servlets<br>
-						Tomcat Web Server
-					</td>
-				</tr>
-			</table>
-		</div>
-		<div class = "shadow" >
-			<h2>
-				<em>E</em>DUCATION<br>
-			</h2>
-			<div>
-				Bachelor of Science, Computer Engineering, University of Utah, 2008<br>
-				CompTIA A+ Certification, Dec. 2010(Verification Code:&emsp;
-				DY59K0SBGHBQ5WZD )
-			</div>
-		</div>
-		<div class = "shadow" >
-			<h2>
-				<em>E</em>XPERIENCE<br>
-			</h2>
-			<div>
-				Computer Engineering Senior Project, Team Software Engineering, Advanced Embedded Systems, Software Practice, Computer Systems, and Algorithms and Data Structures.<br>
-				MAVERIK COUNTRY STORES, Salt Lake City, UT June 2006 - Present<br>
-				Assistant Operations Manager--Worked to maintain store operations by stocking store products and preparing various items for sale.<br>
-				FEDEX GROUND, North	Salt Lake, UT Nov. 2002 – Dec. 2005<br>
-				Team Trainer Trained new	employees in proper techniques to optimize space usage and minimize damage to packages.<br>
-				Awarded in 2004 by Fedex management<br>
-				SALT LAKE COMMUNITY COLLEGE LEARNING CENTER, SLC, UT Sept. 2001 – May 2002<br>
-				Math and Physics Tutor Assisted college students with Math and Physics homework, along with test preparation. Gained experience as an educator by working with a diverse group of college students,	each with unique challenges and strengths.<br>
-				AMERICAN STORES, Salt Lake City, UT dates<br>
-				Data entry technician Updated POS database records<br>
-			</div>
-		</div>
-		<div class = "shadow" >
-			<h2>
-				<em>P</em>ERSONAL <em>S</em>TRENGTHS<br>
-			</h2>
-			<div>
-				Works well in groups and promotes a positive work
-				environment. Demonstrates integrity and responsibility in the
-				workplace. Open and honest with co-workers and clients.
-			</div>
-		</div>
-		<div class = "shadow" >
-			<h2>
-				<em>O</em>THER <em>S</em>KILLS<br>
-			</h2>
-			<div>
-				C, C++, Java, C#, Embedded C, Linux, Win32,
-				Microcontrollers, Pocket PC
-			</div>
+	<h1>S<small>PENCER </small>G<small>RAFF</small></h1>
+	<h2>S<small>OFTWARE </small>E<small>NGINEER </small>/ P<small>ROGRAMMER</small></h2>
+	<h5>(801)637-5925 graff_spencer@msn.com</h5>
+	<div class = "shadow" >
+		<p>
+			Talented, enthusiastic software engineer with a broad and well-rounded education;
+			&emsp;a passion for high-quality, well-designed, maintainable software;
+			&emsp;and real-world experience in teamwork and leadership.
+		</p>
+		<ul>
+			Strengths include:
+			<li>Works well in groups and promotes a positive work environment.</li>
+			<li>Demonstrates integrity and responsibility in the workplace.</li>
+			<li>A keen eye for identifying logic errors.</li>
+			<li>Experience in a variety of real-world domains.</li>
+		</ul>
+	</div>
+	<div class = "shadow" >
+		<h3>E<small>DUCATION</small></h3>
+		<h3><small>
+			Bachelor of Science, Computer Engineering, University of Utah, 2008
+		</small></h3>
+		<h3>S<small>KILLS</small> D<small>EVELOPED IN</small> C<small>OURSES</small></h3>
+		<table>
+			<tr>
+				<td class = "raised" ><ul>
+					<li>Assembly Language</li>
+					<li>Testing / Debugging</li>
+					<li>Software Security</li>
+					<li>Profiling/Optimization</li>
+				</ul></td>
+				<td><ul><li>Computer Systems</li></ul></td>
+			</tr>
+			<tr>
+				<td class = "raised" ><ul><li>Team Projects</li></ul></td>
+				<td />
+			</tr>
+			<tr><td colspan = "2" class = "notopborder" ><dl>
+				<dt>Software Engineering</dt>
+				<dd></dd>
+				<dt>Software Practice</dt>
+				<dd></dd>
+				<dt>Computer Systems</dt>
+				<dd></dd>
+				<dt>Team Software Engineering</dt>
+				<dd></dd>
+				<dt>Natural Language Processing</dt>
+				<dd></dd>
+				<dt>Embedded System Design</dt>
+				<dd></dd>
+				<dt>Advanced Embedded Systems</dt>
+				<dd></dd>
+				<dt>Digital System Design</dt>
+				<dd></dd>
+				<dt>Computer Design Lab</dt>
+				<dd></dd>
+				<dt>VLSI Design: Arithmetic Circuits</dt>
+				<dd></dd>
+				<dt>Senior Project</dt>
+				<dd></dd>
+			</dl></td></tr>
+			<tr>
+				<td class = "raised" ><ul>
+					<li>Object Oriented<br>Programming</li>
+					<li>Requirements Analysis</li>
+					<li>UML Documentation</li>
+				</ul></td>
+				<td><ul>
+					<li>Software Engineering</li>
+					<li>Software Practice</li>
+					<li>Team Software Engineering</li>
+				</ul></td>
+			</tr>
+			<tr>
+				<td class = "raised" ><ul><li>Java</li></ul></td>
+				<td><ul>
+					<li>Algorithms & Data Structures</li>
+					<li>Natural Language Processing</li>
+					<li>Compiler Design</li>
+				</ul></td>
+			</tr>
+			<tr>
+				<td class = "raised" ><ul><li>C++</li></ul></td>
+				<td><ul>
+					<li>Intro to Computer Science I / II</li>
+					<li>Discrete Structures</li>
+					<li>Software Practice</li>
+					<li>Computer Systems</li>
+				</ul></td>
+			</tr>
+			<tr>	
+				<td class = "raised" ><ul>
+					<li>C#  &  .net</li>
+				</ul></td>
+				<td><ul><li>Team Software Engineering</li></ul></td>
+			</tr>
+			<tr>
+				<td class = "raised" ><ul>
+					<li>Unix / Linux</li>
+					<li>Shell Scripting</li>
+				</ul></td>
+				<td><ul><li>Unix Internals</li></ul></td>
+			</tr>
+			<tr>
+				<td class = "raised" ><ul>
+					<li>Microcontrollers</li>
+					<li>Hardware Interfacing</li>
+				</ul></td>
+				<td><ul>
+					<li>Embedded System Design</li>
+					<li>Advanced Embedded Systems</li>
+					<li>Senior Project</li>
+				</ul></td>
+			</tr>
+			<tr><td colspan = "2" ><ul>
+				<li>Matlab</li>
+				<li>VHDL</li>
+				<li>Verilog</li>
+				<li>FPGA</li>
+				<li>Win32 API</li>
+				<li>Zigbee Interfacing</li>
+				<li>Pocket PC Development</li>
+			</ul></td></tr>
+		</table>
+	</div>
+	<div class = "shadow" >
+		<h3>O<small>THER</small> S<small>KILLS</small></h3>
+		<table>
+			<tr>
+				<td>PC Maintenance</td>
+				<td><h3><small>
+					CompTIA A+ Certification, Dec. 2010(Verification Code:&emsp;
+					DY59K0SBGHBQ5WZD )
+				</small></h3></td>
+			</tr>
+			<tr>
+				<td>Database</td>
+				<td><ul>
+					<li>SQL</li>
+					<li>JDBC</li>
+					<li>MySQL</li>
+					<li>Oracle DB</li>
+					<li>Git Repository</li>
+				</ul></td>
+			</tr>
+			<tr>
+				<td>Web Development</td>
+				<td><ul>
+					<li>HTML / XHTML</li>
+					<li>CSS</li>
+					<li>JavaScript</li>
+					<li>jQuery</li>
+					<li>JSP</li>
+					<li>Servlets</li>
+					<li>Tomcat Web Server</li>
+				</ul></td>
+			</tr>
+		</table>
+	</div>
+	<div class = "shadow" >
+		<h3>E<small>XPERIENCE</small></h3>
+		<div>
+			MAVERIK COUNTRY STORES, Salt Lake City, UT June 2006 - Present<br>
+			Assistant Operations Manager--Worked to maintain store operations by stocking store products and preparing various items for sale.<br>
+			FEDEX GROUND, North	Salt Lake, UT Nov. 2002 – Dec. 2005<br>
+			Team Trainer Trained new	employees in proper techniques to optimize space usage and minimize damage to packages.<br>
+			Awarded in 2004 by Fedex management<br>
+			SALT LAKE COMMUNITY COLLEGE LEARNING CENTER, SLC, UT Sept. 2001 – May 2002<br>
+			Math and Physics Tutor Assisted college students with Math and Physics homework, along with test preparation. Gained experience as an educator by working with a diverse group of college students,	each with unique challenges and strengths.<br>
+			AMERICAN STORES, Salt Lake City, UT dates<br>
+			Data entry technician Updated POS database records<br>
 		</div>
 	</div>
-
-	<!-- Sign and date the page, it's only polite! -->
-
-
 </body>
 </html>
