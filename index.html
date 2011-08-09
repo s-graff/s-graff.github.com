@@ -42,31 +42,31 @@ li {
 td:first-child { border-left-width: 2px; width: 1.875in; }
 td + td { width: 5.125in; }
 .lev1 {
-	margin: 3px 3px -5px -5px;
+	margin: -2px -2px 0 0;
 	border-width: 0 0 3px 3px;
 	border-left-color: transparent;
 }
 .before2 {
-	margin: 0 0 -5px -5px;
+	margin: -5px -5px 0 0;
 	border-width: 3px 3px 3px 3px;
 	border-top-color: transparent;
 }
-.lev1 > *, .lev2 > * {	
-	margin: 0 0 -1px -1px;
-} 
 .after2 {
 	 border-bottom-width: 5px;
 	 border-left-width: 5px;
 	 border-bottom-color: white;
 }
+.lev2 {
+	margin: -4px -4px 0 0;
+	border-width: 0 0 5px 5px;
+	border-left-color: transparent;
+}
+.lev1 > *, .lev2 > * {	
+	margin: 0 0 -1px -1px;
+} 
 .after2 > * {
 	margin-bottom: -3px;
 	margin-left: -3px;
-}
-.lev2 {
-	margin: -2px -2px -2px -2px;
-	border-width: 0 0 5px 5px;
-	border-left-color: transparent;
 }
 .thinedge {
 	float: left;
@@ -129,7 +129,7 @@ h5 { font-size: 10 pt; font-weight:400; }
 					<li>Software Security</li>
 					<li>Profiling/Optimization</li>
 				</ul></td>
-				<td><ul class = "after2 lev1to1" ><li>Computer Systems</li></ul></td>
+				<td><ul class = "lev1 after2" ><li>Computer Systems</li></ul></td>
 			</tr>
 			<tr>
 				<td><div class = "thickedge" ></div><ul class = "lev2" >
@@ -137,7 +137,7 @@ h5 { font-size: 10 pt; font-weight:400; }
 				</ul></td>
 				<td></td>
 			</tr>
-			<tr><td colspan = "2" class = "notopborder" ><dl class = "after2 lev1to1" >
+			<tr><td colspan = "2" class = "notopborder" ><dl class = "lev1 after2" >
 				<dt>Software Engineering</dt>
 				<dd></dd>
 				<dt>Software Practice</dt>
