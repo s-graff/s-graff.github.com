@@ -13,9 +13,9 @@ table { display: block; border-spacing: 0; empty-cells:  show; }
 td { vertical-align: top; border-left-width: 1px; }
 tr + tr > td { border-top-width: 1px; }
 li {
-	margin-left: 1.5em;
+/*	margin-left: 1.5em;
 	text-indent: -1.5em;
-	list-style-position: outside;
+*/	list-style-position: outside;
 	list-style-type: none;
 }
 /*__SHADOW_BOXES______________________________*/
@@ -41,13 +41,51 @@ li {
 .notopborder td, td.notopborder { border-top-width: 0; }
 td:first-child { border-left-width: 2px; width: 1.875in; }
 td + td { width: 5.125in; }
-.raised { margin: 0; border-width: 0; background-color: #000000; }
-.raised > * {
-	margin: -3px -2px 2px 1px;
-	position: relative;
-	border-width: 1px 1px 1px 2px;
+.lev1 {
+	margin: 3px 3px -5px -5px;
+	border-width: 0 0 3px 3px;
+	border-left-color: transparent;
 }
-.raised, .raised * { font-weight: 700; }
+.before2 {
+	margin: 0 0 -5px -5px;
+	border-width: 3px 3px 3px 3px;
+	border-top-color: transparent;
+}
+.lev1 > *, .lev2 > * {	
+	margin: 0 0 -1px -1px;
+} 
+.after2 {
+	 border-bottom-width: 5px;
+	 border-left-width: 5px;
+	 border-bottom-color: white;
+}
+.after2 > * {
+	margin-bottom: -3px;
+	margin-left: -3px;
+}
+.lev2 {
+	margin: -2px -2px -2px -2px;
+	border-width: 0 0 5px 5px;
+	border-left-color: transparent;
+}
+.thinedge {
+	float: left;
+	height: 100%;
+	margin: 0;
+	width: 0;
+	border-width: 3px 3px 0 0;  
+	border-top-color: transparent;  
+	border-right-color: black;  
+}
+.thickedge {
+	float: left;
+	height: 100%;
+	margin: -3px -3px 0 0;
+	width: 0;
+	border-width: 5px 5px 0 0;  
+	border-top-color: transparent;  
+	border-right-color: black;  
+}
 /*__FONT_STYLES________________________________*/
 h1, h2, h3, h4 { font-weight: 700; text-align: left; }
 h5 { font-stretch: condensed;  }
@@ -85,19 +123,21 @@ h5 { font-size: 10 pt; font-weight:400; }
 		<h3>S<small>KILLS</small> D<small>EVELOPED IN</small> C<small>OURSES</small></h3>
 		<table>
 			<tr>
-				<td class = "raised" ><ul>
+				<td><div class = "thickedge" ></div><ul class = "lev2" >
 					<li>Assembly Language</li>
 					<li>Testing / Debugging</li>
 					<li>Software Security</li>
 					<li>Profiling/Optimization</li>
 				</ul></td>
-				<td><ul><li>Computer Systems</li></ul></td>
+				<td><ul class = "after2 lev1to1" ><li>Computer Systems</li></ul></td>
 			</tr>
 			<tr>
-				<td class = "raised" ><ul><li>Team Projects</li></ul></td>
-				<td />
+				<td><div class = "thickedge" ></div><ul class = "lev2" >
+					<li>Team Projects</li>
+				</ul></td>
+				<td></td>
 			</tr>
-			<tr><td colspan = "2" class = "notopborder" ><dl>
+			<tr><td colspan = "2" class = "notopborder" ><dl class = "after2 lev1to1" >
 				<dt>Software Engineering</dt>
 				<dd></dd>
 				<dt>Software Practice</dt>
@@ -224,10 +264,10 @@ h5 { font-size: 10 pt; font-weight:400; }
 		<div>
 			MAVERIK COUNTRY STORES, Salt Lake City, UT June 2006 - Present<br>
 			Assistant Operations Manager--Worked to maintain store operations by stocking store products and preparing various items for sale.<br>
-			FEDEX GROUND, North	Salt Lake, UT Nov. 2002 – Dec. 2005<br>
+			FEDEX GROUND, North	Salt Lake, UT Nov. 2002 Â– Dec. 2005<br>
 			Team Trainer Trained new	employees in proper techniques to optimize space usage and minimize damage to packages.<br>
 			Awarded in 2004 by Fedex management<br>
-			SALT LAKE COMMUNITY COLLEGE LEARNING CENTER, SLC, UT Sept. 2001 – May 2002<br>
+			SALT LAKE COMMUNITY COLLEGE LEARNING CENTER, SLC, UT Sept. 2001 Â– May 2002<br>
 			Math and Physics Tutor Assisted college students with Math and Physics homework, along with test preparation. Gained experience as an educator by working with a diverse group of college students,	each with unique challenges and strengths.<br>
 			AMERICAN STORES, Salt Lake City, UT dates<br>
 			Data entry technician Updated POS database records<br>
