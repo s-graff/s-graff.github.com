@@ -4,64 +4,42 @@
 <title>Resume, Spencer Graff</title>
 <style type="text/css">
 /*__DEFAULTS__________________________________*/
-* {
-	margin:0;
-	outline:0 solid black;
-	border-style: solid;
-	border-width: 0;
-	border-color: transparent black black transparent;
-	padding:0;
-	font-family:Arial,Helvetica,sans-serif;
-	font-size:12pt;
-	font-style:normal;
-	background: white;
+* { 
+	margin:0;outline:0;background:transparent;padding:0;
+	border-style:solid;border-width:0;border-color:transparent blue red transparent;
+	font-family:Arial,Helvetica,sans-serif;font-size:12pt;font-style:normal;
+	vertical-align: top;
 }
-.main {position:relative;width:7in;height:9.5in;margin:1.75in auto auto;background-color:#ffffff;}
+.main {position:relative;width:7in;height:9.5in;margin:1.75in auto auto;background-color:#fff0e0;}
 /*__SHADOW_BOXES______________________________*/
 .shadow {
 	position: relative;
-	display: inline-block;
-	float: left;
-	clear: both;
-	margin: 4px 8px 10px 0;
-	border: 3px solid #a0a0a0;
-	background-color: #505050;
+	float: none;
+	clear: none;
+	margin: 9px 6px 50px 0;
+	border-color: #606060;
+	border-width: 0 0 6px 6px;
 	width: 100%;
 	height: auto;
 }
 .shadow > * {
-	position: relative;
-	display: block;
-	float: none;
-	clear: left;
 	margin: -6px -8px 3px 3px;
 	border-width: 1px 1px 3px 2px;
 }
-.shadow > h2 + *, .shadow > h3 + * {
-	border-top-width: 3px;
-}
-.shadow > h2, .shadow > h3 {
-	margin: -7px -11px 5px 3px;
-	border-width: 1px 1px 1px 5px;
-}
 /*__DIV_STYLES________________________________*/
 .rowdiv {
-	position: relative;
-	display: block;
-	float: none;
 	clear: both;
 	height: auto;
-	background: white;
+	background: magenta;
 	padding-left: 5px;
 }
-.rowdiv > * { background: white; }
+//.rowdiv > * { background: white; }
 .left1, .lev1, .left2, .lev2, .before2, .after2, .thinedge, .thickedge {
-	background: white;
-//	vertical-align: top;
+//	background: white;
+	vertical-align: top;
 }
 .left1 {
 	position: relative;
-	display: block;
 	float: none;
 	clear: left;
 	margin: -6px 2px 0 -4px;
@@ -72,7 +50,6 @@
 }
 .lev1 {
 	position: absolute;
-	display: block;
 	float: left;
 	top: -3px;
 	left: 50%;
@@ -84,7 +61,6 @@
 }
 .left2 {
 	position: relative;
-	display: block;
 	float: none;
 	clear: left;
 	margin: 0 0 0 -5px;
@@ -104,8 +80,6 @@
 }
 .thinedge {
 	position: absolute;
-	display: block;
-	clear: left;
 	top: -1px;
 	left: 0;
 	width: 0;
@@ -114,8 +88,7 @@
 }
 .thickedge {
 	position: absolute;
-	display: block;
-	clear: left;
+//	clear: left;
 	top: -1px;
 	left: 0;
 	width: 0;
@@ -138,13 +111,12 @@
 .left2 > *, .lev2 > * { margin-top: -5px; }
 .after2 > * { margin-bottom: -3px; }
 ul {
-	display: block;
+	float: none;
 //	background: white;
 	clear: none;
 	height: auto;
 }
 li {
-	display: block;
 //	float: left;
 	clear: both;
 	height: auto;
@@ -208,25 +180,25 @@ h5 { font-size: 10 pt; font-weight:400; }
 </div>
 
 <div class = "shadow" >
-<div class = "rowdiv" >
-	<div class="left2 hundred">
-		<h3>E<small>DUCATION</small></h3>
-		<h3><small>
-			<div>
-				Bachelor of Science, Computer Engineering, University of Utah,
-				<div class="date">May 2008</div>
-			</div>
-		</small></h3>
-	</div>
-</div>
-<div class = "rowdiv" >
-	<div class="left2 hundred">
-		<h3><small>
-			<div>CompTIA A+ Certification,<div class="date">Dec 2010</div></div>
-		</small></h3>
-		<h3>S<small>KILLS</small> D<small>EVELOPED IN</small> C<small>OURSEWORK</small></h3>
-	</div>
-</div>
+	<div class = "rowdiv" >
+		<div class="left2 hundred">
+			<h3>E<small>DUCATION</small></h3>
+			<h3><small>
+				<div>
+					Bachelor of Science, Computer Engineering, University of Utah,
+					<div class="date">May 2008</div>
+				</div>
+			</small></h3>
+		</div>
+	</div><!-- "rowdiv" -->
+	<div class = "rowdiv" >
+		<div class="left2 hundred">
+			<h3><small>
+				<div>CompTIA A+ Certification,<div class="date">Dec 2010</div></div>
+			</small></h3>
+			<h3>S<small>KILLS</small> D<small>EVELOPED IN</small> C<small>OURSEWORK</small></h3>
+		</div>
+	</div><!-- "rowdiv" -->
 	<div class = "rowdiv" >
 		<div class="left2 forty"><ul>
 			<li>Assembly Language</li>
@@ -243,7 +215,7 @@ h5 { font-size: 10 pt; font-weight:400; }
 		<div class="left2 twenty" ><ul>
 			<li>Team Projects</li>
 		</ul></div>
-		<div class="after2 eighty">
+		<div class="after2 eighty"></div>
 		<div class="thickedge"></div>
 	</div><!-- "rowdiv" -->
 	<div class = "rowdiv" >
