@@ -5,27 +5,35 @@
 <style type="text/css">
 /*__DEFAULTS__________________________________*/
 * {
-	margin:0;outline:0 solid #000000;border:0 solid #000000;padding:0;
-	font-family:Arial,Helvetica,sans-serif;font-size:12pt;font-style:normal;
+	margin:0;
+	outline:0 solid black;
+	border-style: solid;
+	border-width: 0;
+	border-color: transparent black black transparent;
+	padding:0;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:12pt;
+	font-style:normal;
+	background: white;
 }
-body { width: 7in; height: 9.5in; margin: 0 auto auto; }
-table { display: block; border-spacing: 0; empty-cells:  show; }
-td { vertical-align: top; border-left-width: 1px; }
-tr + tr > td { border-top-width: 1px; }
-li {
-/*	margin-left: 1.5em;
-	text-indent: -1.5em;
-*/	list-style-position: outside;
-	list-style-type: none;
-}
+.main {position:relative;width:7in;height:9.5in;margin:1.75in auto auto;background-color:#ffffff;}
 /*__SHADOW_BOXES______________________________*/
-.shadow * { background-color: #ffffff; }
 .shadow {
-	margin: 4px 8px 0 0;
+	position: relative;
+	display: inline-block;
+	float: left;
+	clear: both;
+	margin: 4px 8px 10px 0;
 	border: 3px solid #a0a0a0;
 	background-color: #505050;
+	width: 100%;
+	height: auto;
 }
 .shadow > * {
+	position: relative;
+	display: block;
+	float: none;
+	clear: left;
 	margin: -6px -8px 3px 3px;
 	border-width: 1px 1px 3px 2px;
 }
@@ -36,57 +44,132 @@ li {
 	margin: -7px -11px 5px 3px;
 	border-width: 1px 1px 1px 5px;
 }
-.shadow > table { border-left-width: 0; }
-/*__TABLE_STYLES______________________________*/
-.notopborder td, td.notopborder { border-top-width: 0; }
-td:first-child { border-left-width: 2px; width: 1.875in; }
-td + td { width: 5.125in; }
+/*__DIV_STYLES________________________________*/
+.rowdiv {
+	position: relative;
+	display: block;
+	float: none;
+	clear: both;
+	height: auto;
+	background: white;
+	padding-left: 5px;
+}
+.rowdiv > * { background: white; }
+.left1, .lev1, .left2, .lev2, .before2, .after2, .thinedge, .thickedge {
+	background: white;
+//	vertical-align: top;
+}
+.left1 {
+	position: relative;
+	display: block;
+	float: left;
+	clear: left;
+	margin: -6px 2px 0 -4px;
+	border-width: 3px 0 3px 3px;
+	border-left-color: black;
+	width: 50%;
+	height: auto;
+}
 .lev1 {
-	margin: -2px -2px 0 0;
-	border-width: 0 0 3px 3px;
-	border-left-color: transparent;
+	position: absolute;
+	display: block;
+	float: left;
+	top: -3px;
+	left: 50%;
+	margin: -6px 2px 0 -4px;
+	border-width: 3px 0 3px 3px;
+	border-left-color: black;
+	width: 50%;
+	height: 100%;
 }
-.before2 {
-	margin: -5px -5px 0 0;
-	border-width: 3px 3px 3px 3px;
-	border-top-color: transparent;
-}
-.after2 {
-	 border-bottom-width: 5px;
-	 border-left-width: 5px;
-	 border-bottom-color: white;
+.left2 {
+	position: relative;
+	display: block;
+	float: left;
+	clear: left;
+	margin: 0 0 0 -5px;
+	border-width: 0 0 5px 5px;
+	width: 50%;
+	height: auto;
 }
 .lev2 {
-	margin: -4px -4px 0 0;
+	position: absolute;
+	float: left;
+	top: 0;
+	left: 50%;
+	margin: 0 0 0 -5px;
 	border-width: 0 0 5px 5px;
-	border-left-color: transparent;
-}
-.lev1 > *, .lev2 > * {	
-	margin: 0 0 -1px -1px;
-} 
-.after2 > * {
-	margin-bottom: -3px;
-	margin-left: -3px;
+	width: 50%;
+	height: 100%;
 }
 .thinedge {
-	float: left;
-	height: 100%;
-	margin: 0;
+	position: absolute;
+	display: block;
+	top: -1px;
+	left: 0;
 	width: 0;
-	border-width: 3px 3px 0 0;  
-	border-top-color: transparent;  
-	border-right-color: black;  
+	height: 100%;
+	border-width: 3px 3px 0 0;
 }
 .thickedge {
-	float: left;
-	height: 100%;
-	margin: -3px -3px 0 0;
+	position: absolute;
+	display: block;
+	top: -1px;
+	left: 0;
 	width: 0;
+	height: 100%;
 	border-width: 5px 5px 0 0;  
-	border-top-color: transparent;  
-	border-right-color: black;  
 }
+.after2 {
+	position: absolute;
+	float: left;
+	top: 0;
+	left: 50%;
+	margin: -8px -1px 2px -5px;
+	border-width: 3px 3px 3px 3px;
+	border-bottom-color: white;
+	width: 50%;
+	height: 100%;
+}
+.before2 > * {margin-right:-1px;border-right-width:3px;}
+.lev1 > *, .left1 > * { margin-left: -1px; } 
+.left2 > *, .lev2 > * { margin-top: -5px; }
+.after2 > * { margin-bottom: -3px; }
+ul {
+	display: block;
+//	background: white;
+	clear: none;
+	height: auto;
+}
+li {
+	display: block;
+//	float: left;
+	clear: both;
+	height: auto;
+	
+margin-left: 2.5em;
+//text-indent: -2em;
+
+	list-style-position: outside;
+}
+dd {
+	margin-left: 2em;
+}
+.cert {
+	position: absolute;
+	top: -0.6in;
+	right: 0;
+	height: auto;
+	width: auto;
+}
+.date { float: right; width: 1in; }
+.twenty{ width: 20%; }
+.forty{ width: 40%; }
+.sixty{ left: 40%; width: 60%; }
+.eighty{ left: 20%; width: 80%; }
+.hundred{ width: 100%; }
 /*__FONT_STYLES________________________________*/
+h1 { position: relative; background-color: transparent;}
 h1, h2, h3, h4 { font-weight: 700; text-align: left; }
 h5 { font-stretch: condensed;  }
 h1, h2, h5 { text-align: center; }
@@ -98,180 +181,234 @@ h5 { font-size: 10 pt; font-weight:400; }
 </style>
 </head>
 <body>
-	<h1>S<small>PENCER </small>G<small>RAFF</small></h1>
-	<h2>S<small>OFTWARE </small>E<small>NGINEER </small>/ P<small>ROGRAMMER</small></h2>
-	<h5>(801)637-5925 graff_spencer@msn.com</h5>
-	<div class = "shadow" >
+<div class = "main" >
+<img class="cert" src="A+_Certified.gif" alt="A+ Certified"/>
+<h1>S<small>PENCER </small>G<small>RAFF</small></h1>
+<h2>S<small>OFTWARE </small>E<small>NGINEER </small>/ P<small>ROGRAMMER</small></h2>
+<h5>(801)637-5925 graff_spencer@msn.com</h5>
+<div class = "shadow" >
+<div class = "rowdiv" >
+	<div class="left2 hundred">
 		<p>
 			Talented, enthusiastic software engineer with a broad and well-rounded education;
 			&emsp;a passion for high-quality, well-designed, maintainable software;
 			&emsp;and real-world experience in teamwork and leadership.
 		</p>
+		<br>
 		<ul>
 			Strengths include:
 			<li>Works well in groups and promotes a positive work environment.</li>
 			<li>Demonstrates integrity and responsibility in the workplace.</li>
-			<li>A keen eye for identifying logic errors.</li>
 			<li>Experience in a variety of real-world domains.</li>
 		</ul>
 	</div>
-	<div class = "shadow" >
+</div>
+</div>
+
+<div class = "shadow" >
+<div class = "rowdiv" >
+	<div class="left2 hundred">
 		<h3>E<small>DUCATION</small></h3>
 		<h3><small>
-			Bachelor of Science, Computer Engineering, University of Utah, 2008
+			<div>
+				Bachelor of Science, Computer Engineering, University of Utah,
+				<div class="date">May 2008</div>
+			</div>
 		</small></h3>
-		<h3>S<small>KILLS</small> D<small>EVELOPED IN</small> C<small>OURSES</small></h3>
-		<table>
-			<tr>
-				<td><div class = "thickedge" ></div><ul class = "lev2" >
-					<li>Assembly Language</li>
-					<li>Testing / Debugging</li>
-					<li>Software Security</li>
-					<li>Profiling/Optimization</li>
-				</ul></td>
-				<td><ul class = "lev1 after2" ><li>Computer Systems</li></ul></td>
-			</tr>
-			<tr>
-				<td><div class = "thickedge" ></div><ul class = "lev2" >
-					<li>Team Projects</li>
-				</ul></td>
-				<td></td>
-			</tr>
-			<tr><td colspan = "2" class = "notopborder" ><dl class = "lev1 after2" >
-				<dt>Software Engineering</dt>
-				<dd></dd>
-				<dt>Software Practice</dt>
-				<dd></dd>
-				<dt>Computer Systems</dt>
-				<dd></dd>
-				<dt>Team Software Engineering</dt>
-				<dd></dd>
-				<dt>Natural Language Processing</dt>
-				<dd></dd>
-				<dt>Embedded System Design</dt>
-				<dd></dd>
-				<dt>Advanced Embedded Systems</dt>
-				<dd></dd>
-				<dt>Digital System Design</dt>
-				<dd></dd>
-				<dt>Computer Design Lab</dt>
-				<dd></dd>
-				<dt>VLSI Design: Arithmetic Circuits</dt>
-				<dd></dd>
-				<dt>Senior Project</dt>
-				<dd></dd>
-			</dl></td></tr>
-			<tr>
-				<td class = "raised" ><ul>
-					<li>Object Oriented<br>Programming</li>
-					<li>Requirements Analysis</li>
-					<li>UML Documentation</li>
-				</ul></td>
-				<td><ul>
-					<li>Software Engineering</li>
-					<li>Software Practice</li>
-					<li>Team Software Engineering</li>
-				</ul></td>
-			</tr>
-			<tr>
-				<td class = "raised" ><ul><li>Java</li></ul></td>
-				<td><ul>
-					<li>Algorithms & Data Structures</li>
-					<li>Natural Language Processing</li>
-					<li>Compiler Design</li>
-				</ul></td>
-			</tr>
-			<tr>
-				<td class = "raised" ><ul><li>C++</li></ul></td>
-				<td><ul>
-					<li>Intro to Computer Science I / II</li>
-					<li>Discrete Structures</li>
-					<li>Software Practice</li>
-					<li>Computer Systems</li>
-				</ul></td>
-			</tr>
-			<tr>	
-				<td class = "raised" ><ul>
-					<li>C#  &  .net</li>
-				</ul></td>
-				<td><ul><li>Team Software Engineering</li></ul></td>
-			</tr>
-			<tr>
-				<td class = "raised" ><ul>
-					<li>Unix / Linux</li>
-					<li>Shell Scripting</li>
-				</ul></td>
-				<td><ul><li>Unix Internals</li></ul></td>
-			</tr>
-			<tr>
-				<td class = "raised" ><ul>
-					<li>Microcontrollers</li>
-					<li>Hardware Interfacing</li>
-				</ul></td>
-				<td><ul>
-					<li>Embedded System Design</li>
-					<li>Advanced Embedded Systems</li>
-					<li>Senior Project</li>
-				</ul></td>
-			</tr>
-			<tr><td colspan = "2" ><ul>
-				<li>Matlab</li>
-				<li>VHDL</li>
-				<li>Verilog</li>
-				<li>FPGA</li>
-				<li>Win32 API</li>
-				<li>Zigbee Interfacing</li>
-				<li>Pocket PC Development</li>
-			</ul></td></tr>
-		</table>
 	</div>
-	<div class = "shadow" >
-		<h3>O<small>THER</small> S<small>KILLS</small></h3>
-		<table>
-			<tr>
-				<td>PC Maintenance</td>
-				<td><h3><small>
-					CompTIA A+ Certification, Dec. 2010(Verification Code:&emsp;
-					DY59K0SBGHBQ5WZD )
-				</small></h3></td>
-			</tr>
-			<tr>
-				<td>Database</td>
-				<td><ul>
-					<li>SQL</li>
-					<li>JDBC</li>
-					<li>MySQL</li>
-					<li>Oracle DB</li>
-					<li>Git Repository</li>
-				</ul></td>
-			</tr>
-			<tr>
-				<td>Web Development</td>
-				<td><ul>
-					<li>HTML / XHTML</li>
-					<li>CSS</li>
-					<li>JavaScript</li>
-					<li>jQuery</li>
-					<li>JSP</li>
-					<li>Servlets</li>
-					<li>Tomcat Web Server</li>
-				</ul></td>
-			</tr>
-		</table>
+</div>
+<div class = "rowdiv" >
+	<div class="left2 hundred">
+		<h3><small>
+			<div>CompTIA A+ Certification,<div class="date">Dec 2010</div></div>
+		</small></h3>
+		<h3>S<small>KILLS</small> D<small>EVELOPED IN</small> C<small>OURSEWORK</small></h3>
 	</div>
-	<div class = "shadow" >
-		<h3>E<small>XPERIENCE</small></h3>
-		<div>
-			MAVERIK COUNTRY STORES, Salt Lake City, UT June 2006 - Present<br>
-			Assistant Operations Manager--Worked to maintain store operations by stocking store products and preparing various items for sale.<br>
-			FEDEX GROUND, North	Salt Lake, UT Nov. 2002  Dec. 2005<br>
-			Team Trainer Trained new	employees in proper techniques to optimize space usage and minimize damage to packages.<br>
-			Awarded in 2004 by Fedex management<br>
-			SALT LAKE COMMUNITY COLLEGE LEARNING CENTER, SLC, UT Sept. 2001  May 2002<br>
-			Math and Physics Tutor Assisted college students with Math and Physics homework, along with test preparation. Gained experience as an educator by working with a diverse group of college students,	each with unique challenges and strengths.<br>
-			AMERICAN STORES, Salt Lake City, UT dates<br>
-			Data entry technician Updated POS database records<br>
+</div>
+	<div class = "rowdiv" >
+		<div class="left2 forty"><ul>
+			<li>Assembly Language</li>
+			<li>Testing / Debugging</li>
+			<li>Software Security</li>
+			<li>Profiling/Optimization</li>
+		</ul></div>
+		<div class="after2 sixty"><ul>
+			<li>Computer Systems<br></li>
+		</ul></div>
+		<div class="thickedge"></div>
+	</div><!-- "rowdiv" -->
+	<div class = "rowdiv" >
+		<div class="left2 twenty" ><ul>
+			<li>Team Projects</li>
+		</ul></div>
+		<div class="after2 eighty">
+		<div class="thickedge"></div>
+	</div><!-- "rowdiv" -->
+	<div class = "rowdiv" >
+		<div  class="left1 hundred" ><dl>
+			<dt>Software Engineering</dt>
+			<dd>Designed a point-of-sale system starting with requirements analysis, producing all stages of documentation, with a focus on UML</dd>
+			<dt>Software Practice</dt>
+			<dd>Created a checkers game with optional computer opponent and interfacing with projects of other teams w/ scores, tournaments over http</dd>
+			<dt>Team Software Engineering</dt>
+			<dd>Developed multi-player game on PocketPC in C#, locating opponents using WiFi</dd>
+			<dt>Natural Language Processing</dt>
+			<dd>Extracted certain facts automatically from MEDLINE disease outbreak reports</dd>
+			<dt>Advanced Embedded Systems</dt>
+			<dd>Implemented multitasking on a microcontroller.</dd>
+			<dt>VLSI Design: Arithmetic Circuits</dt>
+			<dd>Designed and simulated a floating point unit</dd>
+			<dt>Senior Project</dt>
+			<dd>Interfaced microcontroller through Zigbee modules, USB virtual serial port, and a Win32 socket.</dd>
+		</dl></div>
+		<div class="thinedge"></div>
+	</div><!-- "rowdiv" -->
+	<div class = "rowdiv" >
+		<div class="left2 forty"><ul>
+			<li>Object Oriented<br>Programming</li>
+			<li>Requirements Analysis</li>
+			<li>UML Documentation</li>
+		</ul></div>
+		<div class = "after2 sixty" ><ul>
+			<li>Software Engineering</li>
+			<li>Software Practice</li>
+			<li>Team Software Engineering</li>
+		</ul></div>
+		<div class="thickedge"></div>
+	</div><!-- "rowdiv" -->
+	<div class = "rowdiv" >
+		<div class="left2 forty"><ul>
+			<li>Java</li><br><br><br>
+		</ul></div>
+		<div class = "after2 sixty" ><ul>
+			<li>Algorithms & Data Structures</li>
+			<li>Natural Language Processing</li>
+			<li>Compiler Design</li>
+		</ul></div>
+		<div class="thickedge"></div>
+	</div><!-- "rowdiv" -->
+	<div class = "rowdiv" >
+		<div class="left2 forty"><ul>
+			<li>C++</li><br><br><br><br>
+		</ul></div>
+		<div class = "after2 sixty" ><ul>
+			<li>Intro to Computer Science I / II</li>
+			<li>Discrete Structures</li>
+			<li>Software Practice</li>
+			<li>Computer Systems</li>
+		</ul></div>
+		<div class="thickedge"></div>
+	</div><!-- "rowdiv" -->
+	<div class = "rowdiv" >	
+		<div class="left2 forty"><ul>
+			<li>C#&emsp;&&emsp;.net</li>
+		</ul></div>
+		<div class = "after2 sixty" ><ul>
+			<li>Team Software Engineering</li>
+		</ul></div>
+		<div class="thickedge"></div>
+	</div><!-- "rowdiv" -->
+	<div class = "rowdiv" >
+		<div class="left2 forty"><ul>
+			<li>Unix / Linux</li>
+			<li>Shell Scripting</li>
+		</ul></div>
+		<div class = "after2 sixty" ><ul>
+			<li>Unix Internals</li>
+		</ul></div>
+		<div class="thickedge"></div>
+	</div><!-- "rowdiv" -->
+	<div class = "rowdiv" >
+		<div class="left2 forty"><ul>
+			<li>Microcontrollers</li>
+			<li>Hardware Interfacing</li><br><br>
+		</ul></div>
+		<div class = "after2 sixty" ><ul>
+			<li>Embedded System Design</li>
+			<li>Advanced Embedded Systems</li>
+			<li>Senior Project</li>
+		</ul></div>
+		<div class="thickedge"></div>
+	</div><!-- "rowdiv" -->
+	<div class = "rowdiv" >
+		<div class="left1 hundred"><ul>
+			<li>Matlab</li>
+			<li>VHDL</li>
+			<li>Verilog</li>
+			<li>FPGA</li>
+			<li>Win32 API</li>
+			<li>Zigbee Interfacing</li>
+			<li>Pocket PC Development</li>
+		</ul></div>
+		<div class="thinedge"></div>
+	</div><!-- "rowdiv" -->
+</div>
+<div class = "shadow" >
+	<h3>O<small>THER</small> S<small>KILLS</small></h3>
+	<div class = "rowdiv" >
+		<div class="left2 forty"><ul><li>Database<br><br><br><br><br><br></li></ul></div>
+		<div class = "after2 sixty" ><ul>
+			<li>SQL</li>
+			<li>JDBC</li>
+			<li>MySQL</li>
+			<li>Oracle DB</li>
+			<li>Git Repository</li>
+		</ul></div>
+		<div class="thickedge"></div>
+	</div><!-- "rowdiv" -->
+	<div class = "rowdiv" >
+		<div class="left2 forty"><ul><li>Web Development<br><br><br><br><br><br><br><br><br></li></ul></div>
+		<div class = "after2 sixty" ><ul>
+			<li>HTML / XHTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>jQuery</li>
+			<li>JSP</li>
+			<li>Servlets</li>
+			<li>Tomcat Web Server</li>
+		</ul></div>
+		<div class="thickedge"></div>
+	</div><!-- "rowdiv" -->
+</div>
+<div class = "shadow" >
+<h3>E<small>XPERIENCE</small></h3>
+	<div class = "rowdiv" >
+		<div class = "left1 hundred" >
+			Assistant Operations Manager, MAVERIK COUNTRY STORES, Salt Lake City, UT<br>
+			Worked to maintain store operations by stocking store products and preparing various items for sale, and training new employees.<br>
+			<div class = "date" >Jun 2006<br>&macr;<br>Present</div>
 		</div>
+		<div class="thinedge"></div>
 	</div>
+	
+	<div class = "rowdiv" >
+		<div class = "left1 hundred" >
+			Team Trainer, FEDEX GROUND, North	Salt Lake, UT<br>
+			Trained new	employees in proper techniques to optimize space usage and minimize damage to packages.<br>
+			Awarded in 2004 by Fedex management<br>
+			<div class = "date" >Nov 2002<br>&macr;<br>Dec 2005</div>
+		</div>
+		<div class="thinedge"></div>
+	</div>
+	
+	<div class = "rowdiv" >
+		<div class = "left1 hundred" >
+			Math and Physics Tutor, SALT LAKE COMMUNITY COLLEGE LEARNING CENTER, SLC, UT<br>
+			Assisted college students with Math and Physics homework, along with test preparation. Gained experience as an educator by working with a diverse group of college students.<br>
+			<div class = "date" >Sep 2001<br>&macr;<br>May 2002</div>
+		</div>
+		<div class="thinedge"></div>
+	</div>
+	
+	<div class = "rowdiv" >
+		<div class = "left1 hundred" >
+			Data Entry Technician, AMERICAN STORES, Salt Lake City, UT dates<br>
+			Updated POS database records<br>
+			<div class = "date" >Sep 1998<br>&macr;<br>Aug 1999</div>
+		</div>
+		<div class="thinedge"></div>
+	</div>
+</div>
+</div><!-- "main" -->
 </body>
 </html>
